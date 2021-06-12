@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Keycard
+  - Keycard1
+  - Keycard2
+  - Keycard3
+  - Keycard4
   layers:
   - Default
   - TransparentFX
