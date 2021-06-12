@@ -9,6 +9,9 @@ TagManager:
   - Keycard2
   - Keycard3
   - Keycard4
+  - LevelEnd1
+  - LevelEnd2
+  - LevelEnd3
   layers:
   - Default
   - TransparentFX
