@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerController : MonoBehaviour
 {
@@ -70,6 +71,23 @@ public class playerController : MonoBehaviour
             //TODO: (doesn't work yet, needs to be worded differently?)
             //DestroyObject();
 
+        }
+    }
+
+    // checks for collisions with other game objects
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "LevelEnd1")
+        {
+            SceneManager.LoadScene("LevelTwo");
+        }
+        if (other.gameObject.tag == "LevelEnd2")
+        {
+            SceneManager.LoadScene("LevelThree");
+        }
+        if(other.gameObject.tag == "LevelEnd3")
+        {
+            SceneManager.LoadScene("WinScene");
         }
     }
 }
