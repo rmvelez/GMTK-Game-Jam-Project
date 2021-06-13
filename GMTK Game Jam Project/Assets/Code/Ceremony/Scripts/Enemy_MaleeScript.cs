@@ -14,6 +14,8 @@ public class Enemy_MaleeScript : MonoBehaviour
     private float angle;
     public float Health;
     public float attackRange;
+    public float screenShakeDuration;
+    public float addForceStrenghtMalee;
     public int damage;
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -66,9 +68,17 @@ public class Enemy_MaleeScript : MonoBehaviour
                 //Player Damage
                 item.GetComponent<Player>().TakeDamage(damage);
                 canAttack = false;
+
+                //Screen shake
+                GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<ScreenShakeManager>().TriggerShake(screenShakeDuration);
+
+                //Add force Strenght
+                Vector2 direction = item.gameObject.GetComponent<Transform>().transform.position - gameObject.transform.position;
+
+                item.gameObject.GetComponent<Player>().TakeDamageForceAplied(direction, addForceStrenghtMalee);
             }
-            
-            
+
+
         }
         //Can attack?
         if (attackTimer <= 0f)
@@ -81,6 +91,11 @@ public class Enemy_MaleeScript : MonoBehaviour
             attackTimer -= Time.deltaTime;
         }
         
+    }
+
+    public void TakeDamageForceAplied(Vector2 direction, float strenght)
+    {
+        gameObject.GetComponent<Rigidbody2D>().AddForce(direction.normalized * strenght);
     }
 
 

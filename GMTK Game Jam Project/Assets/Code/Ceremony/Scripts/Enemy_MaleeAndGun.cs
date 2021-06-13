@@ -11,6 +11,8 @@ public class Enemy_MaleeAndGun : MonoBehaviour
     private float angle;
     public float attackRange;
     public float attackTimer;
+    public float screenShakeDurationForMalee;
+    public float addForceStrenghtMalee;
     private float attackTimerHolder;
     public int damage;
     private Rigidbody2D rb;
@@ -30,6 +32,8 @@ public class Enemy_MaleeAndGun : MonoBehaviour
     private GameObject lastBulletRef;
     public float bulletSpeed;
     public float bulletDamage;
+    public float addForceMultiplierBullet;
+    public float screenShakeForBulletDuration;
     public float time;
     private float timeHolder;
     /* GUN ENDS*/
@@ -76,6 +80,14 @@ public class Enemy_MaleeAndGun : MonoBehaviour
                 //Player Damage
                 item.GetComponent<Player>().TakeDamage(damage);
                 canAttack = false;
+
+                //Screen Shake
+                GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<ScreenShakeManager>().TriggerShake(screenShakeDurationForMalee);
+
+                //Add force Strenght
+                Vector2 direction = item.gameObject.GetComponent<Transform>().transform.position - gameObject.transform.position;
+
+                item.gameObject.GetComponent<Player>().TakeDamageForceAplied(direction, addForceStrenghtMalee);
             }
 
 
@@ -113,6 +125,11 @@ public class Enemy_MaleeAndGun : MonoBehaviour
         //There is a bug here, when you close to enemy bullet speed decreases and when you are far from enemy bullet speed increases
 
         lastBulletRef.GetComponent<BulletScript>().bulletDamage = bulletDamage;
+        //Screenshake Duration
+        lastBulletRef.GetComponent<BulletScript>().howMuchShake = screenShakeForBulletDuration;
+
+        //Add force Strenght
+        lastBulletRef.GetComponent<BulletScript>().addForceStrenght = addForceMultiplierBullet;
 
         lastBulletRef.GetComponent<Transform>().eulerAngles = new Vector3(
             gameObject.transform.eulerAngles.x,
@@ -129,6 +146,11 @@ public class Enemy_MaleeAndGun : MonoBehaviour
             time = timeHolder;
             Shoot();
         }
+    }
+
+    public void TakeDamageForceAplied(Vector2 direction, float strenght)
+    {
+        gameObject.GetComponent<Rigidbody2D>().AddForce(direction.normalized * strenght);
     }
 
     /* GUN ENDS*/

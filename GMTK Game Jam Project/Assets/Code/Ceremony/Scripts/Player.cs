@@ -8,6 +8,30 @@ public class Player : MonoBehaviour
 
     //Variables
     public float health;
+    public float playerBulletSpeed;
+    public float damageByBullet;
+    private float angle;
+    public float fireRate;
+    public float playerBulletForce;
+    private float fireRateHolder;
+    public float maxMovementSpeed = 10f;
+    public float minMovementSpeed = 0f;
+    public float howMuchIncreasePerHit;
+    public float howMuchDecreasePerHit;
+    public float currentMovementSpeed;
+    private bool canFire = true;
+    private bool sporeMode = false;
+    public GameObject playerBullet;
+    private Vector2 lookDir;
+    public Transform attackPos;
+    public float attackRange;
+    private bool canAttack = true;
+    private float attackTimerHolder;
+    public float attackTimer;
+    public float damageBySporeAttack;
+    public float sporeAttackForce;
+
+
 
 
     //Methods
@@ -29,13 +53,132 @@ public class Player : MonoBehaviour
         
     }
 
+    //Add force for hit by something
+
+    public void TakeDamageForceAplied(Vector2 direction, float strenght)
+    {
+        gameObject.GetComponent<Rigidbody2D>().AddForce(direction.normalized * strenght);
+    }
+
+    private void PlayerRotatiton()
+    {
+      
+        lookDir = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - (Vector2)gameObject.transform.position;
+        angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        gameObject.GetComponent<Transform>().eulerAngles = new Vector3(
+            gameObject.transform.eulerAngles.x,
+            gameObject.transform.eulerAngles.y,
+            angle
+            );
+    }
+
+    private void Shoot()
+    {
+        if (canFire == true)
+        {
+            GameObject lastBulletRef = Instantiate(playerBullet, gameObject.GetComponent<Transform>().transform.GetChild(0).position, Quaternion.identity);
+            lastBulletRef.GetComponent<Rigidbody2D>().AddForce(lookDir.normalized * playerBulletSpeed);
+            lastBulletRef.GetComponent<PlayerBullet>().damageByBullet = damageByBullet;
+
+            lastBulletRef.GetComponent<PlayerBullet>().addForceStrenght = playerBulletForce;
+
+            lastBulletRef.GetComponent<PlayerBullet>().movementSpeedIncrease = howMuchIncreasePerHit;
+
+            lastBulletRef.GetComponent<PlayerBullet>().movementSpeedDecrease = howMuchDecreasePerHit;
+
+            //bullet rotattion
+            lastBulletRef.GetComponent<Transform>().eulerAngles = new Vector3(
+                gameObject.transform.eulerAngles.x,
+                gameObject.transform.eulerAngles.y,
+                angle
+                );
+            // set to can't shoot
+            canFire = false;
+        }
+
+        
+
+    }
+
+    public void IncreaseMovementSpeed(float howMuchIncrease)
+    {
+        if (currentMovementSpeed < maxMovementSpeed)
+        {
+            currentMovementSpeed += howMuchIncrease;
+        }
+        if (currentMovementSpeed > maxMovementSpeed)
+        {
+            currentMovementSpeed = maxMovementSpeed;
+        }
+        
+    }
+
+    public void DecreaseMovementSpeed(float howMuchIncrease)
+    {
+        if (currentMovementSpeed > minMovementSpeed)
+        {
+            currentMovementSpeed -= howMuchIncrease;
+        }
+        if (currentMovementSpeed < minMovementSpeed)
+        {
+            currentMovementSpeed = minMovementSpeed;
+        }
+    }
+
+
+    private void SporeModeAttack()
+    {
+        //!! RICK & DECKER THERE IS A BUG OverlapCircleAll() NOT DETECTING MORE THAN 1 OBJECT !!
+        //If there is any comment about bug excep this probobly I solved alredy just comment stays
+        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange);
+
+        foreach (var item in enemiesToDamage)
+        {
+            Vector2 direction = item.gameObject.GetComponent<Transform>().transform.position - gameObject.transform.position;
+            if (item.tag != null && item.gameObject.tag == "Enemy_Gun" && canAttack == true)
+            {
+                //Damage
+                item.gameObject.GetComponent<EnemyScript>().TakeDamage(damageBySporeAttack);
+                canAttack = false;
+                //Add force
+                item.gameObject.GetComponent<EnemyScript>().TakeDamageForceAplied(direction, sporeAttackForce);
+            }
+            else if (item.tag != null && item.gameObject.tag == "Enemy_Malee" && canAttack == true)
+            {
+                //Damage
+                item.gameObject.GetComponent<Enemy_MaleeScript>().TakeDamage(damageBySporeAttack);
+                canAttack = false;
+                //Add force
+                item.gameObject.GetComponent<Enemy_MaleeScript>().TakeDamageForceAplied(direction, sporeAttackForce);
+            }
+            else if (item.tag != null && item.gameObject.tag == "Enemy_MaleeAndGun" && canAttack == true)
+            {
+                //Damage
+                item.gameObject.GetComponent<Enemy_MaleeAndGun>().TakeDamage(damageBySporeAttack);
+                canAttack = false;
+                //Add force
+                item.gameObject.GetComponent<Enemy_MaleeAndGun>().TakeDamageForceAplied(direction, sporeAttackForce);
+            }
+        }
+
+        
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
+    }
+
 
 
     // Start is called before the first frame update
     void Start()
-    {
+        {
         
-    }
+         fireRateHolder = fireRate;
+         attackTimerHolder = attackTimer;
+        }
 
     // Update is called once per frame
     void Update()
@@ -43,6 +186,56 @@ public class Player : MonoBehaviour
         if (health <= 0)
         {
             Die();
+        }
+        PlayerRotatiton();
+        //Turn to Spore Mode
+        if (Input.GetMouseButton(0) && sporeMode == false)
+        {
+            Shoot();
+        }
+        else if(Input.GetMouseButton(0) && sporeMode == true)
+        {
+            SporeModeAttack();
+        }
+
+        if (currentMovementSpeed >= maxMovementSpeed)
+        {
+            sporeMode = true;
+            currentMovementSpeed = maxMovementSpeed;
+        }
+
+        if (currentMovementSpeed <= minMovementSpeed)
+        {
+            sporeMode = false;
+            currentMovementSpeed = minMovementSpeed;
+        }
+        if (sporeMode == true)
+        {
+            currentMovementSpeed -= Time.deltaTime;
+        }
+
+        //attakc timer for spore
+        //Can attack?
+        if (attackTimer <= 0f)
+        {
+            canAttack = true;
+            attackTimer = attackTimerHolder;
+        }
+        else if (canAttack == false)
+        {
+            attackTimer -= Time.deltaTime;
+        }
+        
+
+
+        if (fireRate <= 0 && canFire == false)
+        {
+            canFire = true;
+            fireRate = fireRateHolder;
+        }
+        else if (fireRate > 0 && canFire == false)
+        {
+            fireRate -= Time.deltaTime;
         }
     }
 }

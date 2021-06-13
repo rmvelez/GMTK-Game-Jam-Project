@@ -13,8 +13,10 @@ public class EnemyScript : MonoBehaviour
     public GameObject prefab;
     public float bulletSpeed;
     public float bulletDamage;
+    public float addForceMultiplier;
     public float time;
     public float Health;
+    public float screenShakeDuration;
     private float timeHolder;
     private float angle;
     private GameObject lastBulletRef;
@@ -51,6 +53,12 @@ public class EnemyScript : MonoBehaviour
         //There is a bug here, when you close to enemy bullet speed decreases and when you are far from enemy bullet speed increases
         
         lastBulletRef.GetComponent<BulletScript>().bulletDamage = bulletDamage;
+        //Screenshake Duration
+        lastBulletRef.GetComponent<BulletScript>().howMuchShake = screenShakeDuration;
+
+        //Add force Strenght
+        lastBulletRef.GetComponent<BulletScript>().addForceStrenght = addForceMultiplier;
+
 
         lastBulletRef.GetComponent<Transform>().eulerAngles = new Vector3(
             gameObject.transform.eulerAngles.x,
@@ -83,13 +91,23 @@ public class EnemyScript : MonoBehaviour
         Destroy(gameObject);
     }
 
+
+
+    public void TakeDamageForceAplied(Vector2 direction, float strenght)
+    {
+        gameObject.GetComponent<Rigidbody2D>().AddForce(direction.normalized * strenght);
+    }
+
+
+
+
     /* SHOOTING GUY METHODS ENDS */
 
 
 
 
 
-    
+
 
 
     // Start is called before the first frame update

@@ -8,6 +8,8 @@ TagManager:
   - Enemy_Malee
   - Enemy_MaleeAndGun
   - Bullet
+  - ScreenShake
+  - Wall
   layers:
   - Default
   - TransparentFX

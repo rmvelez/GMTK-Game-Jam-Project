@@ -243,6 +243,8 @@ MonoBehaviour:
   speed: 0.02
   Health: 10
   attackRange: 1
+  screenShakeDuration: 0.5
+  addForceStrenghtMalee: 100
   damage: 5
   attackPos: {fileID: 422560180}
   attackTimer: 3

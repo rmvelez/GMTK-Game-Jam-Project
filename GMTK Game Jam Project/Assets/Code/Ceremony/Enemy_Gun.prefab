@@ -212,8 +212,10 @@ MonoBehaviour:
   prefab: {fileID: 7665692581799751264, guid: 556c7f63136e5fc4db32e30b6ec350f1, type: 3}
   bulletSpeed: 200
   bulletDamage: 2
+  addForceMultiplier: 100
   time: 0.5
   Health: 10
+  screenShakeDuration: 0.01
 --- !u!50 &465701826
 Rigidbody2D:
   serializedVersion: 4
@@ -227,8 +229,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
+  m_LinearDrag: 1
+  m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0

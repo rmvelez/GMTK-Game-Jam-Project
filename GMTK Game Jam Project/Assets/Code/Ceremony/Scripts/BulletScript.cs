@@ -6,6 +6,8 @@ public class BulletScript : MonoBehaviour
 {
     //Variables
     public float bulletDamage;
+    public float howMuchShake;
+    public float addForceStrenght;
 
     //Methods
     private void OnTriggerEnter2D(Collider2D collision)
@@ -13,7 +15,16 @@ public class BulletScript : MonoBehaviour
         //Damage to player
         if (collision.gameObject.tag == "Player")
         {
+            //Damage to player
             collision.gameObject.GetComponent<Player>().TakeDamage(bulletDamage);
+
+            //Screenshake
+            GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<ScreenShakeManager>().TriggerShake(howMuchShake);
+
+            //Add force
+            Vector2 direction = collision.gameObject.GetComponent<Transform>().transform.position - gameObject.transform.position;
+            
+            collision.gameObject.GetComponent<Player>().TakeDamageForceAplied(direction, addForceStrenght);
         }
 
         //Destroy bullet
