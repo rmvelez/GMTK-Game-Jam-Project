@@ -268,7 +268,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: GMTK Game Jam Game
+  m_Text: Dr. Alfred and the Mushroom King
 --- !u!222 &251171895
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -592,7 +592,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 22
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -603,21 +603,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Rick Velez - Team Lead / UI Designer / Programmer
-
-
-    Decker "Apex"
-    - Game Designer / Programmer
-
-
-    Ian Marino - Lead Game Designer / Artist
-
-
-    Michael
-    "mpwitty" - Sound Designer / Composer
-
-
-    "Ceremony" - Lead Programmer'
+  m_Text: "Rick Velez - Team Lead / UI Designer / Programmer\n\nDecker \"Apex\" Day
+    - Game Designer / Programmer\n\nIan \"Marino\" Romero Gurman - Lead Game Designer
+    / Artist\n\nMichael Wittenberg - Sound Designer / Composer\n\nUtku \"Ceremony\"
+    \xC7aml\u0131da\u011F  - Lead Programmer"
 --- !u!222 &593013680
 CanvasRenderer:
   m_ObjectHideFlags: 0
