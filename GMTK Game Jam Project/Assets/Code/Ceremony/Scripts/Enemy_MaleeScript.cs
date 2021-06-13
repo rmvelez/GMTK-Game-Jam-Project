@@ -34,7 +34,7 @@ public class Enemy_MaleeScript : MonoBehaviour
     //There is a bug enemy slowing down when as get closer to character
     private void MoveCharacter(Vector2 direction)
     {
-        rb.MovePosition((Vector2)gameObject.GetComponent<Transform>().position + (direction * speed));
+        rb.MovePosition((Vector2)gameObject.GetComponent<Transform>().position + (direction.normalized * speed));
         
     }
     //There is a bug enemy slowing down when as get closer to character

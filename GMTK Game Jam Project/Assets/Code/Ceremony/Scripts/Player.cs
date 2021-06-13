@@ -13,8 +13,14 @@ public class Player : MonoBehaviour
     //Methods
     public void TakeDamage(float decreaseHealth)
     {
+        //decrease helth
         health -= decreaseHealth;
         Debug.Log(decreaseHealth + " Damage Given This Object" + gameObject.name);
+
+        //force
+        /*
+        gameObject.GetComponent<Rigidbody2D>().AddForce(forceDirection.normalized * forceMultiplier);
+        */
     }
     
     private void Die()
@@ -22,6 +28,8 @@ public class Player : MonoBehaviour
         Destroy(gameObject);
         
     }
+
+
 
     // Start is called before the first frame update
     void Start()

@@ -45,11 +45,11 @@ public class EnemyScript : MonoBehaviour
     private void Shoot()
     {
         lastBulletRef = Instantiate(prefab, gameObject.GetComponent<Transform>().transform.GetChild(1).position, Quaternion.identity);
-
+        
         //There is a bug here, when you close to enemy bullet speed decreases and when you are far from enemy bullet speed increases
-        lastBulletRef.GetComponent<Rigidbody2D>().AddForce(new Vector2(lookDir.x * bulletSpeed, lookDir.y * bulletSpeed));
+        lastBulletRef.GetComponent<Rigidbody2D>().AddForce( lookDir.normalized * bulletSpeed);
         //There is a bug here, when you close to enemy bullet speed decreases and when you are far from enemy bullet speed increases
-
+        
         lastBulletRef.GetComponent<BulletScript>().bulletDamage = bulletDamage;
 
         lastBulletRef.GetComponent<Transform>().eulerAngles = new Vector3(
@@ -57,6 +57,7 @@ public class EnemyScript : MonoBehaviour
             gameObject.transform.eulerAngles.y,
             angle
             );
+        
     }
 
 

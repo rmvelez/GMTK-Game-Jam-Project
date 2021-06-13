@@ -44,7 +44,7 @@ public class Enemy_MaleeAndGun : MonoBehaviour
     //There is a bug enemy slowing down when as get closer to character
     private void MoveCharacter(Vector2 direction)
     {
-        rb.MovePosition((Vector2)gameObject.GetComponent<Transform>().position + (direction * speed));
+        rb.MovePosition((Vector2)gameObject.GetComponent<Transform>().position + (direction.normalized * speed));
 
     }
     //There is a bug enemy slowing down when as get closer to character
@@ -109,7 +109,7 @@ public class Enemy_MaleeAndGun : MonoBehaviour
         lastBulletRef = Instantiate(prefab, gameObject.GetComponent<Transform>().transform.GetChild(1).position, Quaternion.identity);
 
         //There is a bug here, when you close to enemy bullet speed decreases and when you are far from enemy bullet speed increases
-        lastBulletRef.GetComponent<Rigidbody2D>().AddForce(new Vector2(lookDir.x * bulletSpeed, lookDir.y * bulletSpeed));
+        lastBulletRef.GetComponent<Rigidbody2D>().AddForce(lookDir.normalized * bulletSpeed);
         //There is a bug here, when you close to enemy bullet speed decreases and when you are far from enemy bullet speed increases
 
         lastBulletRef.GetComponent<BulletScript>().bulletDamage = bulletDamage;

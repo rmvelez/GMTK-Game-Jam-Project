@@ -10,9 +10,16 @@ public class BulletScript : MonoBehaviour
     //Methods
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //Damage to player
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<Player>().TakeDamage(bulletDamage);
+        }
+
+        //Destroy bullet
+        if (collision.gameObject.tag != "Enemy_Gun" && collision.gameObject.tag != "Enemy_Malee" && collision.gameObject.tag != "Enemy_Malee" && collision.gameObject.tag != "Bullet")
+        {
+            Destroy(gameObject);
         }
     }
 
