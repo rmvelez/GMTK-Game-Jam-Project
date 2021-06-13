@@ -19,6 +19,8 @@ public class playerController : MonoBehaviour
     private bool hasKey3;
     private bool hasKey4;
 
+    public GameObject camera;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +35,7 @@ public class playerController : MonoBehaviour
         movey = movement.x = Input.GetAxisRaw("Horizontal");
         movey = movement.y = Input.GetAxisRaw("Vertical");
 
-        
+        camera.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -10);
     }
 
     //Used to grab keycard

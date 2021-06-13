@@ -127,43 +127,58 @@ public class Player : MonoBehaviour
         }
     }
 
-
     private void SporeModeAttack()
     {
         //!! RICK & DECKER THERE IS A BUG OverlapCircleAll() NOT DETECTING MORE THAN 1 OBJECT !!
-        //If there is any comment about bug excep this probobly I solved alredy just comment stays
+        //If there is any comment about bug except this probably I solved already just comment stays
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange);
+        bool hitAnyEnemy = false;
 
         foreach (var item in enemiesToDamage)
         {
             Vector2 direction = item.gameObject.GetComponent<Transform>().transform.position - gameObject.transform.position;
-            if (item.tag != null && item.gameObject.tag == "Enemy_Gun" && canAttack == true)
+            if (item.tag != null && item.tag == "Enemy_Gun" && canAttack == true)
             {
                 //Damage
                 item.gameObject.GetComponent<EnemyScript>().TakeDamage(damageBySporeAttack);
-                canAttack = false;
+                hitAnyEnemy = true;
+
                 //Add force
                 item.gameObject.GetComponent<EnemyScript>().TakeDamageForceAplied(direction, sporeAttackForce);
+
+                Debug.LogWarning(item.tag);
             }
-            else if (item.tag != null && item.gameObject.tag == "Enemy_Malee" && canAttack == true)
+
+            if (item.tag != null && item.tag == "Enemy_Malee" && canAttack == true)
             {
                 //Damage
                 item.gameObject.GetComponent<Enemy_MaleeScript>().TakeDamage(damageBySporeAttack);
-                canAttack = false;
+                hitAnyEnemy = true;
+
                 //Add force
                 item.gameObject.GetComponent<Enemy_MaleeScript>().TakeDamageForceAplied(direction, sporeAttackForce);
+                Debug.LogWarning(item.tag);
             }
-            else if (item.tag != null && item.gameObject.tag == "Enemy_MaleeAndGun" && canAttack == true)
+
+            if (item.tag != null && item.tag == "Enemy_MaleeAndGun" && canAttack == true)
             {
                 //Damage
                 item.gameObject.GetComponent<Enemy_MaleeAndGun>().TakeDamage(damageBySporeAttack);
-                canAttack = false;
+                hitAnyEnemy = true;
+
                 //Add force
                 item.gameObject.GetComponent<Enemy_MaleeAndGun>().TakeDamageForceAplied(direction, sporeAttackForce);
+                Debug.LogWarning(item.tag);
             }
+
+
+
+        }
+        if (hitAnyEnemy == true)
+        {
+            canAttack = false;
         }
 
-        
     }
 
     private void OnDrawGizmosSelected()
