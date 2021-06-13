@@ -27,6 +27,12 @@ public class Enemy_MaleeAndGun : MonoBehaviour
 
     /* MALEE ENDS*/
 
+    /* COMMON */
+    public float activasionRange;
+    [HideInInspector] public bool shouldFollow = false;
+    /* COMMON */
+
+
     /* GUN STARTS*/
     public GameObject prefab;
     private GameObject lastBulletRef;
@@ -193,36 +199,42 @@ public class Enemy_MaleeAndGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        /* MALEE STARTS*/
-        Attack();
-        /* MALEE ENDS*/
-
-        /* GUN STARTS*/
-        Time();
-        /* GUN ENDS*/
-
-        /* COMMON */
-        if (Health <= 0)
+        if (shouldFollow == true)
         {
-            Die();
+            /* MALEE STARTS*/
+            Attack();
+            /* MALEE ENDS*/
+
+            /* GUN STARTS*/
+            Time();
+            /* GUN ENDS*/
+
+            /* COMMON */
+            if (Health <= 0)
+            {
+                Die();
+            }
+            /* COMMON */
+
         }
-        /* COMMON */
 
     }
 
     private void FixedUpdate()
     {
+        if (shouldFollow == true)
+        {
+            /* MALEE STARTS*/
+            movement = objectToLook.GetComponent<Transform>().position - this.transform.position;
+            MoveCharacter(movement);
+            ChangeRotationOfEnemy();
+            /* MALEE ENDS*/
 
-        /* MALEE STARTS*/
-        movement = objectToLook.GetComponent<Transform>().position - this.transform.position;
-        MoveCharacter(movement);
-        ChangeRotationOfEnemy();
-        /* MALEE ENDS*/
+            /* GUN STARTS*/
 
-        /* GUN STARTS*/
+            /* GUN ENDS*/
 
-        /* GUN ENDS*/
+        }
 
     }
 }

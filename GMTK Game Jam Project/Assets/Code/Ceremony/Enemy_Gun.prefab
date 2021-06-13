@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 781876943}
   - component: {fileID: 465701826}
   - component: {fileID: 465701825}
+  - component: {fileID: 3447101036916452753}
   m_Layer: 0
   m_Name: Enemy_Gun
   m_TagString: Enemy_Gun
@@ -216,6 +217,8 @@ MonoBehaviour:
   time: 0.5
   Health: 10
   screenShakeDuration: 0.01
+  activasionRange: 5
+  shouldFollow: 0
 --- !u!50 &465701826
 Rigidbody2D:
   serializedVersion: 4
@@ -263,3 +266,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3447101036916452753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570656974370969006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172902750e1203b4d82819d2bbcf26ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -20,6 +20,8 @@ public class EnemyScript : MonoBehaviour
     private float timeHolder;
     private float angle;
     private GameObject lastBulletRef;
+    public float activasionRange;
+    [HideInInspector] public bool shouldFollow = false;
     /* SHOOTING GUY VARIABLES ENDS */
 
     
@@ -126,27 +128,34 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /* SHOOTING GUY CODES STARTS */
-        Time();
-        /* SHOOTING GUY CODES ENDS */
-        if (Health <= 0)
+        if (shouldFollow == true)
         {
-            Die();
+            /* SHOOTING GUY CODES STARTS */
+            Time();
+            /* SHOOTING GUY CODES ENDS */
+            if (Health <= 0)
+            {
+                Die();
+            }
+
         }
-
-
         
     }
 
     private void FixedUpdate()
     {
-        /* SHOOTING GUY CODES STARTS */
-        ChangeRotationOfEnemy();
-        /* SHOOTING GUY CODES ENDS */
 
-
+        if (shouldFollow == true)
+        {
 
         
+        /* SHOOTING GUY CODES STARTS */
+        ChangeRotationOfEnemy();
+            /* SHOOTING GUY CODES ENDS */
+        }
+
+
+
 
     }
 

@@ -47,6 +47,8 @@ public class Player : MonoBehaviour
         */
     }
     
+   
+
     private void Die()
     {
         Destroy(gameObject);
@@ -178,6 +180,8 @@ public class Player : MonoBehaviour
         
          fireRateHolder = fireRate;
          attackTimerHolder = attackTimer;
+
+       
         }
 
     // Update is called once per frame

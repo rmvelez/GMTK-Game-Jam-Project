@@ -234,6 +234,7 @@ GameObject:
   - component: {fileID: 1507987833}
   - component: {fileID: 1507987834}
   - component: {fileID: 6400707816128547128}
+  - component: {fileID: 4742878061086555526}
   m_Layer: 0
   m_Name: Enemy_MaleeAndGun
   m_TagString: Enemy_MaleeAndGun
@@ -326,6 +327,8 @@ MonoBehaviour:
   addForceStrenghtMalee: 100
   damage: 5
   attackPos: {fileID: 510370362}
+  activasionRange: 5
+  shouldFollow: 0
   prefab: {fileID: 7665692581799751264, guid: 556c7f63136e5fc4db32e30b6ec350f1, type: 3}
   bulletSpeed: 200
   bulletDamage: 2
@@ -333,6 +336,18 @@ MonoBehaviour:
   screenShakeForBulletDuration: 0.01
   time: 0.5
   Health: 10
+--- !u!114 &4742878061086555526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570656974370969006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172902750e1203b4d82819d2bbcf26ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4319751934306020409
 GameObject:
   m_ObjectHideFlags: 0

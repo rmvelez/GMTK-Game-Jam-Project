@@ -27,7 +27,9 @@ public class Enemy_MaleeScript : MonoBehaviour
     public float attackTimer;
     private float attackTimerHolder;
     private bool canAttack = true;
-    
+    public float activasionRange;
+    [HideInInspector] public bool shouldFollow = false;
+
 
 
 
@@ -132,14 +134,17 @@ public class Enemy_MaleeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Health <= 0)
+
+        if (shouldFollow == true)
         {
-            Die();
-        }
-        
+            if (Health <= 0)
+            {
+                Die();
+            }
+
             Attack();
-            
-            
+
+        }
         
         
         
@@ -147,8 +152,11 @@ public class Enemy_MaleeScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        movement = objectToLook.GetComponent<Transform>().position - this.transform.position;
-        MoveCharacter(movement);
-        ChangeRotationOfEnemy();
+        if (shouldFollow == true)
+        {
+            movement = objectToLook.GetComponent<Transform>().position - this.transform.position;
+            MoveCharacter(movement);
+            ChangeRotationOfEnemy();
+        }
     }
 }
