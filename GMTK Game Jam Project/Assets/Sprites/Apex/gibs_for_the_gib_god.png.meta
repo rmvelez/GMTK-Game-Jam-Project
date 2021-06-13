@@ -1,0 +1,848 @@
+fileFormatVersion: 2
+guid: e46e06c46d5406c42af18c5e3da98e7e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5848746909961535166
+    second: gibs_for_the_gib_god_0
+  - first:
+      213: -7963442314954680183
+    second: gibs_for_the_gib_god_1
+  - first:
+      213: 9054237031508298416
+    second: gibs_for_the_gib_god_2
+  - first:
+      213: -2480132744155777426
+    second: gibs_for_the_gib_god_3
+  - first:
+      213: -638056663854162250
+    second: gibs_for_the_gib_god_4
+  - first:
+      213: 8519166884617086729
+    second: gibs_for_the_gib_god_5
+  - first:
+      213: -1532041914612351
+    second: gibs_for_the_gib_god_6
+  - first:
+      213: -8130144921443789716
+    second: gibs_for_the_gib_god_7
+  - first:
+      213: 1145013327997639296
+    second: gibs_for_the_gib_god_8
+  - first:
+      213: -8715766606477540225
+    second: gibs_for_the_gib_god_9
+  - first:
+      213: -8452308718783104264
+    second: gibs_for_the_gib_god_10
+  - first:
+      213: 4985031147405122355
+    second: gibs_for_the_gib_god_11
+  - first:
+      213: -4332313704431917122
+    second: gibs_for_the_gib_god_12
+  - first:
+      213: 5000025359690328856
+    second: gibs_for_the_gib_god_13
+  - first:
+      213: -3013562944425953796
+    second: gibs_for_the_gib_god_14
+  - first:
+      213: -2719185456398367812
+    second: gibs_for_the_gib_god_15
+  - first:
+      213: 9072977687248449544
+    second: gibs_for_the_gib_god_17
+  - first:
+      213: 2353843862875101360
+    second: gibs_for_the_gib_god_18
+  - first:
+      213: 2980754609601898645
+    second: gibs_for_the_gib_god_19
+  - first:
+      213: -2508983333911027588
+    second: gibs_for_the_gib_god_20
+  - first:
+      213: -2845115550492671662
+    second: gibs_for_the_gib_god_21
+  - first:
+      213: 7783210238897158569
+    second: gibs_for_the_gib_god_22
+  - first:
+      213: 4508355638515959918
+    second: gibs_for_the_gib_god_24
+  - first:
+      213: 6157922558649436355
+    second: gibs_for_the_gib_god_25
+  - first:
+      213: -7566923963486914873
+    second: gibs_for_the_gib_god_27
+  - first:
+      213: 9205655875402590878
+    second: gibs_for_the_gib_god_28
+  - first:
+      213: -2178242909167336461
+    second: gibs_for_the_gib_god_29
+  - first:
+      213: 3347631340025256194
+    second: gibs_for_the_gib_god_30
+  - first:
+      213: -8908218194607668681
+    second: gibs_for_the_gib_god_31
+  - first:
+      213: 3716899614816136156
+    second: gibs_for_the_gib_god_32
+  - first:
+      213: 7341123998921514453
+    second: gibs_for_the_gib_god_33
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_0
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 773
+        width: 248
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 11, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebebb6d935cea2150800000000000000
+      internalID: 5848746909961535166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_1
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 821
+        width: 77
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988dfcb186b2c7190800000000000000
+      internalID: -7963442314954680183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_2
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 909
+        width: 54
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba4d37db9c17ad70800000000000000
+      internalID: 9054237031508298416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_3
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 875
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e66b7c4d86cc49dd0800000000000000
+      internalID: -2480132744155777426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_4
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 623
+        width: 212
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bed66448da2527f0800000000000000
+      internalID: -638056663854162250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_5
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 817
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9076fd325292a3670800000000000000
+      internalID: 8519166884617086729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_6
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 856
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18506e1bd9e8afff0800000000000000
+      internalID: -1532041914612351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_7
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 761
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6495e0f44ceb2f80800000000000000
+      internalID: -8130144921443789716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_8
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 741
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a13662e87e3ef00800000000000000
+      internalID: 1145013327997639296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_9
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 790
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74c1b313706b0780800000000000000
+      internalID: -8715766606477540225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_10
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 522
+        width: 95
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fafef4a00e53ba80800000000000000
+      internalID: -8452308718783104264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_11
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 552
+        width: 139
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b175faa636e2540800000000000000
+      internalID: 4985031147405122355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_12
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 479
+        width: 165
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb767cfa3a780e3c0800000000000000
+      internalID: -4332313704431917122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_13
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 428
+        width: 191
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b6948c298a36540800000000000000
+      internalID: 5000025359690328856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_14
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 515
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5f535f77cad26d0800000000000000
+      internalID: -3013562944425953796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_15
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 402
+        width: 192
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb387f8fb33834ad0800000000000000
+      internalID: -2719185456398367812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 404
+        width: 51
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8003d77c221b9ed70800000000000000
+      internalID: 9072977687248449544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_18
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 452
+        width: 58
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b85767a5888aa020800000000000000
+      internalID: 2353843862875101360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_19
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 424
+        width: 23
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 598ede35684cd5920800000000000000
+      internalID: 2980754609601898645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_20
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 335
+        width: 185
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c70abd273fc4e2dd0800000000000000
+      internalID: -2508983333911027588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_21
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 461
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251c1fb1b7e1488d0800000000000000
+      internalID: -2845115550492671662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_22
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 435
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9f5ad9974830c60800000000000000
+      internalID: 7783210238897158569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_24
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 385
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e688fd22195e09e30800000000000000
+      internalID: 4508355638515959918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_25
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 256
+        width: 179
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c80aa6e0f5557550800000000000000
+      internalID: 6157922558649436355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_27
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 185
+        width: 143
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6b8f91fb2ecf690800000000000000
+      internalID: -7566923963486914873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_28
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 125
+        width: 162
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9aebd9be3f01cf70800000000000000
+      internalID: 9205655875402590878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_29
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 243
+        width: 156
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f3419c6d9355c1e0800000000000000
+      internalID: -2178242909167336461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_30
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 74
+        width: 272
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2099b2d97fc257e20800000000000000
+      internalID: 3347631340025256194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_31
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 76
+        width: 113
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7320db0ffb6af5480800000000000000
+      internalID: -8908218194607668681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_32
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 164
+        width: 98
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdbe6e6b184159330800000000000000
+      internalID: 3716899614816136156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gibs_for_the_gib_god_33
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 46
+        width: 106
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dddfcfc169e0e560800000000000000
+      internalID: 7341123998921514453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
