@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1060978855604672039}
   - component: {fileID: 1060978855604672040}
   - component: {fileID: -1108969477176050665}
+  - component: {fileID: 7598367255875506853}
   m_Layer: 0
   m_Name: Guard1
   m_TagString: Untagged
@@ -193,12 +194,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e6aa6d703944d0479bb6d2ebcd22c61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
-  bulletSpeed: 0
-  bulletDamage: 0
-  addForceMultiplier: 0
-  time: 0
-  Health: 0
-  screenShakeDuration: 0
-  activasionRange: 0
+  prefab: {fileID: 7665692581799751264, guid: 556c7f63136e5fc4db32e30b6ec350f1, type: 3}
+  bulletSpeed: 200
+  bulletDamage: 2
+  addForceMultiplier: 100
+  time: 0.5
+  Health: 10
+  screenShakeDuration: 0.01
+  activasionRange: 5
   shouldFollow: 0
+--- !u!114 &7598367255875506853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060978855604672041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172902750e1203b4d82819d2bbcf26ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
