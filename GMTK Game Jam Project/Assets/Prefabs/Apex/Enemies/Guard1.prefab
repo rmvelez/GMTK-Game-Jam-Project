@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7598367255875506853}
   m_Layer: 0
   m_Name: Guard1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,9 +177,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 10
-  sheild: 0
   remains: {fileID: 8377256863543803866, guid: 67e083336b92e44488b96d182ab37930, type: 3}
-  deathEffect: {fileID: 0}
+  deathEffect: {fileID: 6550283131303701496, guid: 97b19142901826a46822d6a06b7a49eb,
+    type: 3}
   _keycard: {fileID: 0}
   holdingKeycard: 0
 --- !u!114 &-1108969477176050665

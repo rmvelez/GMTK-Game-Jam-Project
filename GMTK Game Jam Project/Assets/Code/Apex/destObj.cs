@@ -9,14 +9,12 @@ public class destObj : MonoBehaviour
     // This script can be put on a player, enemy, or destrutrable object such as a wall, crate, table, chair, etc.
 
     //HP is the amount of health an enemy has
-    // Sheild could regenerate back over time (after a short delay) in spore form or on armored/ sheilded enimes
     //Remains is the death sprite such as a dead guard on the ground or a broken and splintered table
     // Keycard is the keycard prefab spawned on death
 
     //holdingKeycard is true if the enemy is captain/ special and is holding a card that drops on death
 
     public int hp;
-    public int sheild;
     public GameObject remains;
     public GameObject deathEffect;
     public GameObject _keycard;
@@ -46,7 +44,7 @@ public class destObj : MonoBehaviour
             }
             if (remains != null)
             {
-                GameObject body = Instantiate(remains, transform.position, Quaternion.identity);
+                GameObject body = Instantiate(remains, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)));
 
                 // might not need the following?
                 //Rigidbody2D rb = body.GetComponent<Rigidbody2D>();

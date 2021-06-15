@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2685510784906080506}
   m_Layer: 0
   m_Name: nuclear_tube
-  m_TagString: Untagged
+  m_TagString: Destructable Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

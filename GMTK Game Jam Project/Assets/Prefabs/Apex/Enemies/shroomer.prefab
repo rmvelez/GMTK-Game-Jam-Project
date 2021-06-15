@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 4722271280272608404}
   m_Layer: 0
   m_Name: shroomer
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 3913237306570250349}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
-  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2422540284624790214}
   m_Father: {fileID: 0}
@@ -130,9 +130,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 5
-  sheild: 0
   remains: {fileID: 0}
-  deathEffect: {fileID: 0}
+  deathEffect: {fileID: 7664608229850776001, guid: bb67482d5940f214f85843c4e2cf664d,
+    type: 3}
   _keycard: {fileID: 0}
   holdingKeycard: 0
 --- !u!114 &2741842434011265609

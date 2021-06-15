@@ -12,6 +12,12 @@ TagManager:
   - LevelEnd1
   - LevelEnd2
   - LevelEnd3
+  - Bullet
+  - Enemy
+  - Destructable Object
+  - Wall
+  - Enemy_MaleeAndGun
+  - Enemy_Malee
   layers:
   - Default
   - TransparentFX
@@ -21,7 +27,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - layer8
   - 
   - 
   - 

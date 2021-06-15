@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
         if (canFire == true)
         {
             GameObject lastBulletRef = Instantiate(playerBullet, gameObject.GetComponent<Transform>().transform.GetChild(0).position, Quaternion.identity);
-            lastBulletRef.GetComponent<Rigidbody2D>().AddForce(lookDir.normalized * playerBulletSpeed);
+            lastBulletRef.GetComponent<Rigidbody2D>().AddForce(lookDir.normalized * playerBulletSpeed*4);
             lastBulletRef.GetComponent<PlayerBullet>().damageByBullet = damageByBullet;
 
             lastBulletRef.GetComponent<PlayerBullet>().addForceStrenght = playerBulletForce;
@@ -181,11 +181,11 @@ public class Player : MonoBehaviour
 
     }
 
-    private void OnDrawGizmosSelected()
+   /* private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
-    }
+    }*/
 
 
 
