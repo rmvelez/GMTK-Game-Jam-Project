@@ -17,7 +17,7 @@ public class bullet : MonoBehaviour
     {
         bullCollider = gameObject.GetComponent<Collider2D>();
         bullCollider.isTrigger = true;
-        Destroy(gameObject, 0.2f);
+        Destroy(gameObject, 0.7f);
     }
 
     //turns trigger off as soon as it leaves player hitbox

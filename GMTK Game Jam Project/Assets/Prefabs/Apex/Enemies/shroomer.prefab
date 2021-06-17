@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 5
-  remains: {fileID: 0}
+  remains: {fileID: 7589082223127983950, guid: 08b2a8e39ce8e594099072607e2a4683, type: 3}
   deathEffect: {fileID: 7664608229850776001, guid: bb67482d5940f214f85843c4e2cf664d,
     type: 3}
   _keycard: {fileID: 0}

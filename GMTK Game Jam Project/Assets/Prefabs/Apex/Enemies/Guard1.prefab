@@ -177,7 +177,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 10
-  remains: {fileID: 8377256863543803866, guid: 67e083336b92e44488b96d182ab37930, type: 3}
+  remains: {fileID: 2762354779327890031, guid: 67e083336b92e44488b96d182ab37930, type: 3}
+  remains2: {fileID: 1962360370568084844, guid: 14fdede2a07ee44458264aa5be8e39ef,
+    type: 3}
+  remains3: {fileID: 3889138309746898404, guid: 275c937481193ec45820568b3ae72915,
+    type: 3}
+  remains4: {fileID: 6817837173814161604, guid: 619d2b1bf810f104cb42fdc2676ac3d8,
+    type: 3}
+  remains5: {fileID: 1716809467849238071, guid: bc4313599f7f9374eae09bab70f35984,
+    type: 3}
+  force: 500
   deathEffect: {fileID: 6550283131303701496, guid: 97b19142901826a46822d6a06b7a49eb,
     type: 3}
   _keycard: {fileID: 0}

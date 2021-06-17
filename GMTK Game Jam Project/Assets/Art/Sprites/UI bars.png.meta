@@ -8,6 +8,9 @@ TextureImporter:
   - first:
       213: 1177743748702012134
     second: UI bars_2
+  - first:
+      213: 5237572467699338516
+    second: UI bars_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,7 +104,7 @@ TextureImporter:
         width: 660
         height: 261
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -117,12 +120,12 @@ TextureImporter:
       name: UI bars_2
       rect:
         serializedVersion: 2
-        x: 4
-        y: 541
-        width: 994
-        height: 171
+        x: 0
+        y: 543
+        width: 998
+        height: 108
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,6 +133,27 @@ TextureImporter:
       bones: []
       spriteID: 6e202d113bf285010800000000000000
       internalID: 1177743748702012134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI bars_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 650
+        width: 363
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41dc596d8689fa840800000000000000
+      internalID: 5237572467699338516
       vertices: []
       indices: 
       edges: []

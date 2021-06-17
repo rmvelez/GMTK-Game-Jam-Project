@@ -212,8 +212,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 15
-  sheild: 0
-  remains: {fileID: 7779532823649400255, guid: 081ee290aa9cd564a9cc3245460ed27e, type: 3}
+  remains: {fileID: 179744340075560551, guid: 081ee290aa9cd564a9cc3245460ed27e, type: 3}
+  remains2: {fileID: 0}
+  remains3: {fileID: 0}
+  remains4: {fileID: 0}
+  remains5: {fileID: 0}
   deathEffect: {fileID: 0}
   _keycard: {fileID: 0}
   holdingKeycard: 0

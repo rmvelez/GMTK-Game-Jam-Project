@@ -16,6 +16,11 @@ public class destObj : MonoBehaviour
 
     public int hp;
     public GameObject remains;
+    public GameObject remains2;
+    public GameObject remains3;
+    public GameObject remains4;
+    public GameObject remains5;
+    public int force;
     public GameObject deathEffect;
     public GameObject _keycard;
 
@@ -50,8 +55,17 @@ public class destObj : MonoBehaviour
                 //Rigidbody2D rb = body.GetComponent<Rigidbody2D>();
                 //Destroy(gameObject);
             }
+            if (remains2 != null)
+            {GameObject body = Instantiate(remains2, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f))); Rigidbody2D rb = body.GetComponent<Rigidbody2D>(); rb.AddForce(transform.right * force);}
+            if (remains3 != null)
+            { GameObject body = Instantiate(remains3, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f))); Rigidbody2D rb = body.GetComponent<Rigidbody2D>(); rb.AddForce(transform.right * force); }
+            if (remains4 != null)
+            { GameObject body = Instantiate(remains4, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f))); Rigidbody2D rb = body.GetComponent<Rigidbody2D>(); rb.AddForce(transform.right * force); }
+            if (remains5 != null)
+            { GameObject body = Instantiate(remains5, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f))); Rigidbody2D rb = body.GetComponent<Rigidbody2D>(); rb.AddForce(transform.right * force); }
+
         }
-    }
+        }
     //TakeDamage is how things take damage. Things that deal damage should have a damage int and pass that on
     public void TakeDamage(int damage)
     {
