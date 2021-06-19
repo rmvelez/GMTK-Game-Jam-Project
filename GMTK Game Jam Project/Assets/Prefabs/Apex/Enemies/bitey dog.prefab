@@ -11,9 +11,7 @@ GameObject:
   - component: {fileID: 8691488830938845608}
   - component: {fileID: 719473360854977231}
   - component: {fileID: -7928480218282245487}
-  - component: {fileID: -496444422054838927}
   - component: {fileID: 1293687050490292464}
-  - component: {fileID: 7095597758150200906}
   m_Layer: 0
   m_Name: bitey dog
   m_TagString: Enemy
@@ -101,32 +99,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 5
   remains: {fileID: 0}
+  remains2: {fileID: 0}
+  remains3: {fileID: 0}
+  remains4: {fileID: 0}
+  remains5: {fileID: 0}
+  force: 0
   deathEffect: {fileID: 6550283131303701496, guid: 97b19142901826a46822d6a06b7a49eb,
     type: 3}
   _keycard: {fileID: 0}
   holdingKeycard: 0
---- !u!114 &-496444422054838927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5782921991458147859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d3a6f27619856c468cb0e52e862ba92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  Health: 10
-  attackRange: 1
-  screenShakeDuration: 0.05
-  addForceStrenghtMalee: 100
-  damage: 5
-  attackPos: {fileID: 7773419064285359982}
-  attackTimer: 3
-  activasionRange: 5
-  shouldFollow: 0
 --- !u!58 &1293687050490292464
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -143,18 +124,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.26666668
---- !u!114 &7095597758150200906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5782921991458147859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172902750e1203b4d82819d2bbcf26ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6047245594215957985
 GameObject:
   m_ObjectHideFlags: 0

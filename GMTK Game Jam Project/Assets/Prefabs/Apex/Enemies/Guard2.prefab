@@ -42,8 +42,6 @@ GameObject:
   - component: {fileID: 3531210031687320317}
   - component: {fileID: 3531210031687320316}
   - component: {fileID: 3531210031687320319}
-  - component: {fileID: -3706968871923476460}
-  - component: {fileID: 3461991652590733881}
   m_Layer: 0
   m_Name: Guard2
   m_TagString: Enemy
@@ -217,46 +215,7 @@ MonoBehaviour:
   remains3: {fileID: 0}
   remains4: {fileID: 0}
   remains5: {fileID: 0}
+  force: 0
   deathEffect: {fileID: 0}
   _keycard: {fileID: 0}
   holdingKeycard: 0
---- !u!114 &-3706968871923476460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3531210031687320318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 109438ed9d1503a46bef524fcae011ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  attackRange: 1
-  attackTimer: 2
-  screenShakeDurationForMalee: 0.7
-  addForceStrenghtMalee: 100
-  damage: 5
-  attackPos: {fileID: 6579468189632506989}
-  activasionRange: 5
-  shouldFollow: 0
-  prefab: {fileID: 7665692581799751264, guid: 556c7f63136e5fc4db32e30b6ec350f1, type: 3}
-  bulletSpeed: 200
-  bulletDamage: 2
-  addForceMultiplierBullet: 10
-  screenShakeForBulletDuration: 0.1
-  time: 0.5
-  Health: 15
---- !u!114 &3461991652590733881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3531210031687320318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172902750e1203b4d82819d2bbcf26ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

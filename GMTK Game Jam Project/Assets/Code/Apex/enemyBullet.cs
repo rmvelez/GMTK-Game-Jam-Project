@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class enemyBullet : MonoBehaviour
 {
     [SerializeField] Rigidbody2D bulletRb;
     Collider2D bullCollider;
@@ -10,19 +10,18 @@ public class bullet : MonoBehaviour
 
     [SerializeField] private GameObject particle;
 
-    [SerializeField] private spore _spore;
 
 
     // Start is called before the first frame update
     void Start()
     {
         bullCollider = gameObject.GetComponent<Collider2D>();
-        bullCollider.isTrigger = true;
+        //bullCollider.isTrigger = true;
         Destroy(gameObject, 0.7f);
     }
 
     //turns trigger off as soon as it leaves player hitbox
-    private void OnTriggerExit2D(Collider2D other) { if (other.gameObject.CompareTag("Player")) { bullCollider.isTrigger = false; } }
+   // private void OnTriggerExit2D(Collider2D other) { if (other.gameObject.CompareTag("Player")) { bullCollider.isTrigger = false; } }
 
     //spawns impact particle
     private void SpawnParticle()
@@ -44,14 +43,14 @@ public class bullet : MonoBehaviour
             Destroy(gameObject);
         }
         //Enemy
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Player"))
         {
             if (_other != null)
             {
                 _other.hp -= bulletDamage;
                 SpawnParticle();
                 Destroy(gameObject);
-                Debug.Log("Hit enemy");
+                Debug.Log("Hit player");
             }
 
         }
@@ -59,13 +58,11 @@ public class bullet : MonoBehaviour
         if (other.gameObject.CompareTag("Destructable Object"))
         {
             if (_other != null)
-            {  
+            {
                 _other.TakeDamage(bulletDamage);
                 SpawnParticle();
                 Destroy(gameObject);
             }
         }
-
-       
     }
 }

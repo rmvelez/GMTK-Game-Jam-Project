@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e6aa6d703944d0479bb6d2ebcd22c61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7665692581799751264, guid: 556c7f63136e5fc4db32e30b6ec350f1, type: 3}
+  prefab: {fileID: 6713593250296741025, guid: cac24112d9c8e5241a9aafcded2841b5, type: 3}
   bulletSpeed: 200
   bulletDamage: 2
   addForceMultiplier: 100

@@ -41,9 +41,7 @@ GameObject:
   - component: {fileID: 2127105113218772858}
   - component: {fileID: 6623616282748565063}
   - component: {fileID: -8723001723296875259}
-  - component: {fileID: 4499639875434434002}
   - component: {fileID: -5629470138763100884}
-  - component: {fileID: 429338222404486907}
   m_Layer: 0
   m_Name: slimer
   m_TagString: Enemy
@@ -130,33 +128,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 5
-  sheild: 0
   remains: {fileID: 0}
+  remains2: {fileID: 0}
+  remains3: {fileID: 0}
+  remains4: {fileID: 0}
+  remains5: {fileID: 0}
+  force: 0
   deathEffect: {fileID: 0}
   _keycard: {fileID: 0}
   holdingKeycard: 0
---- !u!114 &4499639875434434002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3943358105812414407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d3a6f27619856c468cb0e52e862ba92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  Health: 10
-  attackRange: 1
-  screenShakeDuration: 0.5
-  addForceStrenghtMalee: 100
-  damage: 5
-  attackPos: {fileID: 4211693032396911188}
-  attackTimer: 3
-  activasionRange: 5
-  shouldFollow: 0
 --- !u!58 &-5629470138763100884
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -173,15 +153,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.34333333
---- !u!114 &429338222404486907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3943358105812414407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172902750e1203b4d82819d2bbcf26ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

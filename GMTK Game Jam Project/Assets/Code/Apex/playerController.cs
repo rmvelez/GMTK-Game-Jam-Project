@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class playerController : MonoBehaviour
 {
-    private bool isGameOver;
-    private bool isSporeForm;
+    public bool isGameOver;
+    public bool isSporeForm;
+
+    private spore _spore;
 
     [SerializeField] private Rigidbody2D rb;
 
-    [SerializeField] private int moveSpeed=10;
+    [SerializeField] public float moveSpeed=10;
     private Vector2 movement;
     public float movey;
 
@@ -57,7 +59,7 @@ public class playerController : MonoBehaviour
         rb.velocity = new Vector2(movey * moveSpeed, rb.velocity.y);
        
         Vector2 direction = movement.normalized;
-        rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + direction * moveSpeed * /*_spore.current **/Time.fixedDeltaTime);
     }
 
     //Collision triggers

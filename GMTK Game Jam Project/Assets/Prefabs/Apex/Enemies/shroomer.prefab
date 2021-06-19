@@ -41,9 +41,7 @@ GameObject:
   - component: {fileID: 6634260920182904170}
   - component: {fileID: 8406783950604183038}
   - component: {fileID: -508756694080984770}
-  - component: {fileID: 2741842434011265609}
   - component: {fileID: 5858898212729479051}
-  - component: {fileID: 4722271280272608404}
   m_Layer: 0
   m_Name: shroomer
   m_TagString: Enemy
@@ -130,33 +128,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 5
-  remains: {fileID: 7589082223127983950, guid: 08b2a8e39ce8e594099072607e2a4683, type: 3}
+  remains: {fileID: 3903724996032553443, guid: 177d70d4b5db5744f826ea2024dabec6, type: 3}
+  remains2: {fileID: 0}
+  remains3: {fileID: 0}
+  remains4: {fileID: 0}
+  remains5: {fileID: 0}
+  force: 0
   deathEffect: {fileID: 7664608229850776001, guid: bb67482d5940f214f85843c4e2cf664d,
     type: 3}
   _keycard: {fileID: 0}
   holdingKeycard: 0
---- !u!114 &2741842434011265609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3913237306570250349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d3a6f27619856c468cb0e52e862ba92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  Health: 10
-  attackRange: 1
-  screenShakeDuration: 0.5
-  addForceStrenghtMalee: 100
-  damage: 5
-  attackPos: {fileID: 2422540284624790214}
-  attackTimer: 3
-  activasionRange: 5
-  shouldFollow: 0
 --- !u!58 &5858898212729479051
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -173,15 +154,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.38166666
---- !u!114 &4722271280272608404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3913237306570250349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172902750e1203b4d82819d2bbcf26ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

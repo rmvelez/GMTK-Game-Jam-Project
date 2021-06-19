@@ -23,6 +23,7 @@ public class destObj : MonoBehaviour
     public int force;
     public GameObject deathEffect;
     public GameObject _keycard;
+    public spore _spore;
 
     public bool holdingKeycard;
 
@@ -35,6 +36,7 @@ public class destObj : MonoBehaviour
         if (hp <= 0)
         {
 
+           // _spore.current += 10;
             if (deathEffect != null)
             {
                 GameObject effy = Instantiate(deathEffect, transform.position, Quaternion.identity);
@@ -47,25 +49,20 @@ public class destObj : MonoBehaviour
 
                 GameObject kkeycard = Instantiate(_keycard, transform.position, transform.rotation) as GameObject;
             }
+            //leave behind a corpse sprite and up to 4 gibs
             if (remains != null)
-            {
-                GameObject body = Instantiate(remains, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)));
-
-                // might not need the following?
-                //Rigidbody2D rb = body.GetComponent<Rigidbody2D>();
-                //Destroy(gameObject);
-            }
+            {GameObject body = Instantiate(remains, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)));}
             if (remains2 != null)
-            {GameObject body = Instantiate(remains2, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f))); Rigidbody2D rb = body.GetComponent<Rigidbody2D>(); rb.AddForce(transform.right * force);}
+            {GameObject body = Instantiate(remains2, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f))); Rigidbody2D rb = body.GetComponent<Rigidbody2D>(); GetComponent<Rigidbody>().velocity = Random.onUnitSphere * force; }
             if (remains3 != null)
-            { GameObject body = Instantiate(remains3, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f))); Rigidbody2D rb = body.GetComponent<Rigidbody2D>(); rb.AddForce(transform.right * force); }
+            { GameObject body = Instantiate(remains3, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f))); Rigidbody2D rb = body.GetComponent<Rigidbody2D>(); GetComponent<Rigidbody>().velocity = Random.onUnitSphere * force; }
             if (remains4 != null)
-            { GameObject body = Instantiate(remains4, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f))); Rigidbody2D rb = body.GetComponent<Rigidbody2D>(); rb.AddForce(transform.right * force); }
+            { GameObject body = Instantiate(remains4, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f))); Rigidbody2D rb = body.GetComponent<Rigidbody2D>(); GetComponent<Rigidbody>().velocity = Random.onUnitSphere * force; }
             if (remains5 != null)
-            { GameObject body = Instantiate(remains5, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f))); Rigidbody2D rb = body.GetComponent<Rigidbody2D>(); rb.AddForce(transform.right * force); }
-
+            { GameObject body = Instantiate(remains5, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f))); Rigidbody2D rb = body.GetComponent<Rigidbody2D>(); GetComponent<Rigidbody>().velocity = Random.onUnitSphere * force; }
+            //rb.AddForce(transform.right * force)_
         }
-        }
+    }
     //TakeDamage is how things take damage. Things that deal damage should have a damage int and pass that on
     public void TakeDamage(int damage)
     {

@@ -101,12 +101,7 @@ public class EnemyScript : MonoBehaviour
     }
 
 
-
-
     /* SHOOTING GUY METHODS ENDS */
-
-
-
 
 
 
@@ -119,9 +114,6 @@ public class EnemyScript : MonoBehaviour
         timeHolder = time;
         objectToLook = GameObject.Find("Player");
         /* SHOOTING GUY CODES ENDS */
-
-
-
 
     }
 
@@ -137,7 +129,6 @@ public class EnemyScript : MonoBehaviour
             {
                 Die();
             }
-
         }
         
     }
@@ -148,14 +139,10 @@ public class EnemyScript : MonoBehaviour
         if (shouldFollow == true)
         {
 
-        
         /* SHOOTING GUY CODES STARTS */
         ChangeRotationOfEnemy();
             /* SHOOTING GUY CODES ENDS */
         }
-
-
-
 
     }
 

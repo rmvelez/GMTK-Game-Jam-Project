@@ -14,7 +14,7 @@ public class DistanceDetectionForAI : MonoBehaviour
     public void checkPlayerIsNear()
     {
         float magnatude = Vector2.Distance((Vector2)playerObj.GetComponent<Transform>().position, (Vector2)gameObject.transform.position);
-        Debug.Log(magnatude);
+        //Debug.Log(magnatude);
         if (magnatude < activasionRange)
         {
             if (gameObject.tag == "Enemy_Gun")

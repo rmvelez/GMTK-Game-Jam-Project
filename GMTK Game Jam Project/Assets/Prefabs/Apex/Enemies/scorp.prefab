@@ -11,9 +11,7 @@ GameObject:
   - component: {fileID: 4709563506372704090}
   - component: {fileID: 4709563506372704089}
   - component: {fileID: -3390715724689211570}
-  - component: {fileID: -4335784162444503043}
   - component: {fileID: -7562157667658363663}
-  - component: {fileID: 830525532882025071}
   m_Layer: 0
   m_Name: scorp
   m_TagString: Enemy
@@ -100,33 +98,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 5
-  sheild: 0
   remains: {fileID: 0}
+  remains2: {fileID: 0}
+  remains3: {fileID: 0}
+  remains4: {fileID: 0}
+  remains5: {fileID: 0}
+  force: 0
   deathEffect: {fileID: 0}
   _keycard: {fileID: 0}
   holdingKeycard: 0
---- !u!114 &-4335784162444503043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4709563506372704088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d3a6f27619856c468cb0e52e862ba92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  Health: 10
-  attackRange: 1
-  screenShakeDuration: 0.5
-  addForceStrenghtMalee: 100
-  damage: 5
-  attackPos: {fileID: 8775123063143845336}
-  attackTimer: 3
-  activasionRange: 5
-  shouldFollow: 0
 --- !u!58 &-7562157667658363663
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -143,18 +123,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.51666665
---- !u!114 &830525532882025071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4709563506372704088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172902750e1203b4d82819d2bbcf26ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &9168493965840493764
 GameObject:
   m_ObjectHideFlags: 0
