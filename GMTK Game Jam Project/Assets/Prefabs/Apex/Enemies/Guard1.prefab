@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1060978855604672038}
   - component: {fileID: 1060978855604672039}
   - component: {fileID: 1060978855604672040}
+  - component: {fileID: 6809889413226202017}
   m_Layer: 0
   m_Name: Guard1
   m_TagString: Enemy
@@ -175,6 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 10
+  isEnemy: 1
   remains: {fileID: 2762354779327890031, guid: 67e083336b92e44488b96d182ab37930, type: 3}
   remains2: {fileID: 1962360370568084844, guid: 14fdede2a07ee44458264aa5be8e39ef,
     type: 3}
@@ -188,5 +190,25 @@ MonoBehaviour:
   deathEffect: {fileID: 6550283131303701496, guid: 97b19142901826a46822d6a06b7a49eb,
     type: 3}
   _keycard: {fileID: 0}
-  _spore: {fileID: 0}
   holdingKeycard: 0
+--- !u!50 &6809889413226202017
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060978855604672041}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

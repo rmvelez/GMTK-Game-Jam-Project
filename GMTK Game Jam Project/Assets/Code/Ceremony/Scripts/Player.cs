@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     private float angle;
     public float fireRate;
     public float playerBulletForce;
-    private float fireRateHolder;
+    [SerializeField] private float fireRateHolder;
     public float maxMovementSpeed = 10f;
     public float minMovementSpeed = 0f;
     public float howMuchIncreasePerHit;

@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 5
+  isEnemy: 1
   remains: {fileID: 0}
   remains2: {fileID: 0}
   remains3: {fileID: 0}

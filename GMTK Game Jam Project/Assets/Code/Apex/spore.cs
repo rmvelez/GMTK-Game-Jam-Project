@@ -8,6 +8,7 @@ public class spore : MonoBehaviour
 
     public Image mask;
     public const int SPORE_MAX = 100;
+    public const int startAmt=20;
     public float current;
     public float sporeDeclineAmt;
     public float spore2eclineAmt2;
@@ -15,24 +16,26 @@ public class spore : MonoBehaviour
     void Awake()
     {
        _player = GameObject.Find("Player").GetComponent<playerController>();
+        current = startAmt;
     }
     private void Update()
     {
- 
+            
         GetCurrentFill();
         if (current < 0){ current = 0; }
+        if (current > 101) { current = 100; }
 
         if (_player.isSporeForm == false)
         {
-            if (current >=0)
-            {current -= sporeDeclineAmt * Time.deltaTime;}
+            //make bar tick slowly down
+            if (current >=0){current -= sporeDeclineAmt * Time.deltaTime;}
         }
         else if (_player.isSporeForm == true)
         {
-            if (current >= 0)
-            {current -= spore2eclineAmt2 * Time.deltaTime;}
+            //make bar tick slowly down
+            if (current >= 0){current -= spore2eclineAmt2 * Time.deltaTime;}
         }
-        
+        //if (Input.GetKeyDown(KeyCode.Space)) { GetMore(10); }
     }
 
     private void GetCurrentFill()

@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 8406783950604183038}
   - component: {fileID: -508756694080984770}
   - component: {fileID: 5858898212729479051}
+  - component: {fileID: 8585569733448049668}
   m_Layer: 0
   m_Name: shroomer
   m_TagString: Enemy
@@ -128,12 +129,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 5
+  isEnemy: 1
   remains: {fileID: 3903724996032553443, guid: 177d70d4b5db5744f826ea2024dabec6, type: 3}
-  remains2: {fileID: 0}
-  remains3: {fileID: 0}
-  remains4: {fileID: 0}
-  remains5: {fileID: 0}
-  force: 0
+  remains2: {fileID: 192402709542431939, guid: d0a84f68fc34aff46955f9162786b4e9, type: 3}
+  remains3: {fileID: 3690464879748349185, guid: 9792311edae476d448e20afd8693a5c4,
+    type: 3}
+  remains4: {fileID: 1059729175295817422, guid: 298228cb4664d58488c99f92badc473a,
+    type: 3}
+  remains5: {fileID: 3436924120671411656, guid: 2ec66d60631bd404e9e9b0ece1d1cc36,
+    type: 3}
+  force: 500
   deathEffect: {fileID: 7664608229850776001, guid: bb67482d5940f214f85843c4e2cf664d,
     type: 3}
   _keycard: {fileID: 0}
@@ -154,3 +159,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.38166666
+--- !u!50 &8585569733448049668
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3913237306570250349}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

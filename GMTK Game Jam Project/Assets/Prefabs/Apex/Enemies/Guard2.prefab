@@ -210,6 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 15
+  isEnemy: 1
   remains: {fileID: 179744340075560551, guid: 081ee290aa9cd564a9cc3245460ed27e, type: 3}
   remains2: {fileID: 0}
   remains3: {fileID: 0}

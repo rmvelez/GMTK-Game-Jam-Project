@@ -16,10 +16,10 @@ public class playerController : MonoBehaviour
     private Vector2 movement;
     public float movey;
 
-    private bool hasKey1;
-    private bool hasKey2;
-    private bool hasKey3;
-    private bool hasKey4;
+    [SerializeField] private bool hasKey1;
+    [SerializeField] private bool hasKey2;
+    [SerializeField] private bool hasKey3;
+    [SerializeField] private bool hasKey4;
 
     public GameObject camera;
 
@@ -29,6 +29,7 @@ public class playerController : MonoBehaviour
         isGameOver = false;
         isSporeForm = false;
         hasKey1 = false; hasKey2 = false; hasKey3 = false; hasKey4 = false;
+        _spore = GameObject.Find("SporeBarFill").GetComponent<spore>();
     }
 
     // Update is called once per frame
@@ -40,26 +41,16 @@ public class playerController : MonoBehaviour
         camera.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -10);
     }
 
-    //Used to grab keycard
-    void GrabKeycard()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("Pressed E");
-            Debug.Log("Grabbed Keycard");
-            //need a way to differentiate which keycard the player is picking up
-            //TODO: fix this, only works for key1
-            hasKey1 = true;
-        }
-    }
-
+    
     //movement
     void FixedUpdate()
     {
         rb.velocity = new Vector2(movey * moveSpeed, rb.velocity.y);
        
         Vector2 direction = movement.normalized;
-        rb.MovePosition(rb.position + direction * moveSpeed * /*_spore.current **/Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + direction * moveSpeed * _spore.current *Time.fixedDeltaTime);
+
+        //if (Input.GetKeyDown(KeyCode.Space)) { _spore.GetMore(10); }
     }
 
     //Collision triggers
@@ -68,14 +59,10 @@ public class playerController : MonoBehaviour
     {
         destObj _col = col.collider.gameObject.GetComponent<destObj>();
 
-        if (col.gameObject.CompareTag("Keycard"))
-        {
-            GrabKeycard();
-            //destroy keycard 
-            //TODO: (doesn't work yet, needs to be worded differently?)
-            //DestroyObject();
-
-        }
+        if (col.gameObject.tag == "Keycard1") { hasKey1 = true;}
+        if (col.gameObject.CompareTag("Keycard2")) { hasKey2 = true; }
+        if (col.gameObject.CompareTag("Keycard3")) { hasKey3 = true; }
+        if (col.gameObject.CompareTag("Keycard4")) { hasKey4 = true; }
     }
 
     // checks for collisions with other game objects

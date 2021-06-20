@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1962360370568084846}
   - component: {fileID: 1962360370568084847}
   - component: {fileID: 1962360370568084841}
-  - component: {fileID: 6802118319188768733}
+  - component: {fileID: 5880176212522695379}
   m_Layer: 0
   m_Name: gib_s1
   m_TagString: Untagged
@@ -111,7 +111,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.52, y: 0.37}
   m_EdgeRadius: 0
---- !u!50 &6802118319188768733
+--- !u!50 &5880176212522695379
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
